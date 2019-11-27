@@ -1,0 +1,26 @@
+
+//public class Main {
+//	public static void main(String[] args) {
+//		System.out.println(123);
+//		System.out.println("Your_ICPC_Team_Name");
+//	}
+//}
+//
+
+import java.util.Scanner;
+public class Main{
+	public static void main(String args[]){
+		Scanner scanner = new Scanner(System.in);
+		int a, b;
+		a = scanner.nextInt();
+		b = scanner.nextInt();
+		int sum = a + b;
+		int sub = a - b;
+		int multi = a * b;
+		int divide = a / b;
+		System.out.println(sum);
+		System.out.println(sub);
+		System.out.println(multi);
+		System.out.println(divide);
+	}
+}
