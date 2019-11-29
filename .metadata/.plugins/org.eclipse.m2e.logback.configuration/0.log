@@ -1,3 +1,56 @@
 2019-11-25 15:18:13,608 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
 2019-11-26 08:57:01,121 [Worker-9: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
 2019-11-27 17:49:37,252 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2019-11-28 09:28:01,083 [Worker-7: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2019-11-29 16:33:12,551 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2019-11-29 16:33:13,086 [Worker-3: Loading available Gradle versions] WARN  o.e.b.c.i.u.g.PublishedGradleVersions - Can't close stream after downloading published Gradle versions
+javax.net.ssl.SSLException: Connection has been shutdown: javax.net.ssl.SSLException: Tag mismatch!
+	at sun.security.ssl.SSLSocketImpl.checkEOF(Unknown Source) ~[na:1.8.0_221]
+	at sun.security.ssl.AppInputStream.available(Unknown Source) ~[na:1.8.0_221]
+	at java.io.BufferedInputStream.available(Unknown Source) ~[na:1.8.0_221]
+	at sun.net.www.MeteredStream.available(Unknown Source) ~[na:1.8.0_221]
+	at sun.net.www.http.KeepAliveStream.close(Unknown Source) ~[na:1.8.0_221]
+	at java.io.FilterInputStream.close(Unknown Source) ~[na:1.8.0_221]
+	at sun.net.www.protocol.http.HttpURLConnection$HttpInputStream.close(Unknown Source) ~[na:1.8.0_221]
+	at sun.nio.cs.StreamDecoder.implClose(Unknown Source) ~[na:1.8.0_221]
+	at sun.nio.cs.StreamDecoder.close(Unknown Source) ~[na:1.8.0_221]
+	at java.io.InputStreamReader.close(Unknown Source) ~[na:1.8.0_221]
+	at com.google.common.io.Closeables.close(Closeables.java:78) ~[com.google.guava_27.1.0.v20190517-1946.jar:na]
+	at org.eclipse.buildship.core.internal.util.gradle.PublishedGradleVersions.downloadVersionInformation(PublishedGradleVersions.java:168) [org.eclipse.buildship.core_3.1.2.v20190903-1802.jar:na]
+	at org.eclipse.buildship.core.internal.util.gradle.PublishedGradleVersions.tryToDownloadAndCacheVersions(PublishedGradleVersions.java:148) [org.eclipse.buildship.core_3.1.2.v20190903-1802.jar:na]
+	at org.eclipse.buildship.core.internal.util.gradle.PublishedGradleVersions.tryToUpdateOutdatedVersionsFile(PublishedGradleVersions.java:132) [org.eclipse.buildship.core_3.1.2.v20190903-1802.jar:na]
+	at org.eclipse.buildship.core.internal.util.gradle.PublishedGradleVersions.create(PublishedGradleVersions.java:116) [org.eclipse.buildship.core_3.1.2.v20190903-1802.jar:na]
+	at org.eclipse.buildship.core.internal.util.gradle.PublishedGradleVersionsWrapper$LoadVersionsJob.run(PublishedGradleVersionsWrapper.java:62) [org.eclipse.buildship.core_3.1.2.v20190903-1802.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63) [org.eclipse.core.jobs_3.10.500.v20190620-1426.jar:na]
+Caused by: javax.net.ssl.SSLException: Tag mismatch!
+	at sun.security.ssl.Alerts.getSSLException(Unknown Source) ~[na:1.8.0_221]
+	at sun.security.ssl.SSLSocketImpl.fatal(Unknown Source) ~[na:1.8.0_221]
+	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source) ~[na:1.8.0_221]
+	at sun.security.ssl.SSLSocketImpl.readDataRecord(Unknown Source) ~[na:1.8.0_221]
+	at sun.security.ssl.AppInputStream.read(Unknown Source) ~[na:1.8.0_221]
+	at java.io.BufferedInputStream.read1(Unknown Source) ~[na:1.8.0_221]
+	at java.io.BufferedInputStream.read(Unknown Source) ~[na:1.8.0_221]
+	at sun.net.www.MeteredStream.read(Unknown Source) ~[na:1.8.0_221]
+	at java.io.FilterInputStream.read(Unknown Source) ~[na:1.8.0_221]
+	at sun.net.www.protocol.http.HttpURLConnection$HttpInputStream.read(Unknown Source) ~[na:1.8.0_221]
+	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source) ~[na:1.8.0_221]
+	at sun.nio.cs.StreamDecoder.implRead(Unknown Source) ~[na:1.8.0_221]
+	at sun.nio.cs.StreamDecoder.read(Unknown Source) ~[na:1.8.0_221]
+	at java.io.InputStreamReader.read(Unknown Source) ~[na:1.8.0_221]
+	at java.io.Reader.read(Unknown Source) ~[na:1.8.0_221]
+	at com.google.common.io.CharStreams.copyReaderToBuilder(CharStreams.java:119) ~[com.google.guava_27.1.0.v20190517-1946.jar:na]
+	at com.google.common.io.CharStreams.toStringBuilder(CharStreams.java:177) ~[com.google.guava_27.1.0.v20190517-1946.jar:na]
+	at com.google.common.io.CharStreams.toString(CharStreams.java:163) ~[com.google.guava_27.1.0.v20190517-1946.jar:na]
+	at org.eclipse.buildship.core.internal.util.gradle.PublishedGradleVersions.downloadVersionInformation(PublishedGradleVersions.java:162) [org.eclipse.buildship.core_3.1.2.v20190903-1802.jar:na]
+	... 5 common frames omitted
+Caused by: javax.crypto.AEADBadTagException: Tag mismatch!
+	at com.sun.crypto.provider.GaloisCounterMode.decryptFinal(GaloisCounterMode.java:578) ~[sunjce_provider.jar:1.8.0_231]
+	at com.sun.crypto.provider.CipherCore.finalNoPadding(CipherCore.java:1116) ~[sunjce_provider.jar:1.8.0_231]
+	at com.sun.crypto.provider.CipherCore.fillOutputBuffer(CipherCore.java:1053) ~[sunjce_provider.jar:1.8.0_231]
+	at com.sun.crypto.provider.CipherCore.doFinal(CipherCore.java:941) ~[sunjce_provider.jar:1.8.0_231]
+	at com.sun.crypto.provider.AESCipher.engineDoFinal(AESCipher.java:491) ~[sunjce_provider.jar:1.8.0_231]
+	at javax.crypto.Cipher.doFinal(Cipher.java:2376) ~[na:1.8.0_191]
+	at sun.security.ssl.CipherBox.decrypt(Unknown Source) ~[na:1.8.0_221]
+	at sun.security.ssl.InputRecord.decrypt(Unknown Source) ~[na:1.8.0_221]
+	... 22 common frames omitted
+2019-11-29 16:33:13,136 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Updating Gradle version information cache failed. Using outdated cache.
