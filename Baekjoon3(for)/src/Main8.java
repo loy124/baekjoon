@@ -19,6 +19,7 @@ public class Main8 {
 		for (int i = 0; i < num1; i++) {
 			num[i] = scanner.nextInt();
 		}
+		
 		for (int i = 0; i < num1; i++) {
 			if(num[i] < num2) {
 				System.out.print(num[i] + " ");

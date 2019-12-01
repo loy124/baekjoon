@@ -54,3 +54,5 @@ Caused by: javax.crypto.AEADBadTagException: Tag mismatch!
 	at sun.security.ssl.InputRecord.decrypt(Unknown Source) ~[na:1.8.0_221]
 	... 22 common frames omitted
 2019-11-29 16:33:13,136 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Updating Gradle version information cache failed. Using outdated cache.
+2019-11-30 17:25:38,745 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2019-12-01 14:09:28,498 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.

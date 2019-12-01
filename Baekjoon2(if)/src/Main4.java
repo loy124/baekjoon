@@ -27,11 +27,6 @@ public class Main4 {
 			}
 			
 		}
-		System.out.println(num[1]);
-		
-		
-		
-		
-	
+		System.out.println(num[1]);	
 	}
 }
