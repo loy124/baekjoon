@@ -22,57 +22,63 @@ public class Main2 {
 		Scanner scanner = new Scanner(System.in);
 		int number = 8;
 		int numArray[] = new int[number];
-		int ascending[] = new int[number];
-		int descending[] = new int[number];
-		
-		for (int i = 0; i < numArray.length; i++) {
-			numArray[i] = scanner.nextInt();
-			ascending[i] = numArray[i];
-			descending[i] = numArray[i];
-		}
-		
-		int temp = 0;
-		for (int i = 0; i < numArray.length - 1; i++) {
-			for (int j = i + 1; j < numArray.length; j++) {
-				if(numArray[i] > numArray[j]) {
-					temp = ascending[i];
-					ascending[i] = ascending[j];
-					ascending[j] = temp;
-				} 
-				if (numArray[i] < numArray[j]) {
-					temp = descending[i];
-					descending[i] = descending[j];
-					descending[j] = temp;
-				} 
-			}
-		}
 		String str = "";
 		for (int i = 0; i < numArray.length; i++) {
-			if(numArray[i] == ascending[i]) {
+			numArray[i] = scanner.nextInt();
+		}
+		for (int i = 0; i < numArray.length - 1; i++) {
+			if(numArray[i + 1]  == numArray[i] + 1) {
 				str = "ascending";
-			} else if(numArray[i] == descending[i]) {
+			}else if (numArray[i + 1] == numArray[i] - 1) {
 				str = "descending";
 			} else {
 				str = "mixed";
+				break;
 			}
 		}
 		System.out.println(str);
-		scanner.close();
-		
 	}
+	
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//Scanner scanner = new Scanner(System.in);
+//int number = 8;
+//int numArray[] = new int[number];
+//int ascending[] = new int[number];
+//int descending[] = new int[number];
+//
+//for (int i = 0; i < numArray.length; i++) {
+//	numArray[i] = scanner.nextInt();
+//	ascending[i] = numArray[i];
+//	descending[i] = numArray[i];
+//}
+//
+//int temp = 0;
+//for (int i = 0; i < numArray.length - 1; i++) {
+//	for (int j = i + 1; j < numArray.length; j++) {
+//		if(numArray[i] > numArray[j]) {
+//			temp = ascending[i];
+//			ascending[i] = ascending[j];
+//			ascending[j] = temp;
+//		} 
+//		if (numArray[i] < numArray[j]) {
+//			temp = descending[i];
+//			descending[i] = descending[j];
+//			descending[j] = temp;
+//		} 
+//	}
+//}
+//String str = "";
+//for (int i = 0; i < numArray.length; i++) {
+//	if(numArray[i] == ascending[i]) {
+//		str = "ascending";
+//	} else if(numArray[i] == descending[i]) {
+//		str = "descending";
+//	} else {
+//		str = "mixed";
+//	}
+//}
+//System.out.println(str);
+//scanner.close();
+//
+//
